@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.sidebar.header("Seu estoque")
+st.sidebar.header("Seu Estoque")
 janela = st.sidebar.radio("",["Inicio"])
 
 arquivo = st.file_uploader("Carregue a planilha do sap",type=["ods","xlsx"])
