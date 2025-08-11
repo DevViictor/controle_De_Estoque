@@ -2,9 +2,12 @@ import streamlit as st
 import pandas as pd
 
 
+st.sidebar.header("Controle de Estoque")
+janela = st.sidebar.radio("", ["Filtro"])
+
 coluns = ["Material","Texto breve material","Nº de série"]
 
-arquivo = st.file_uploader("Carregue a planilha do sap",type=["ods","xlsx"])
+arquivo = st.file_uploader("Carregue a planilha desejada",type=["ods","xlsx"])
 
 st.header("Controle de Estoque")
 
@@ -19,4 +22,7 @@ if arquivo is not None:
     else:
         newleitor = leitor
 
+    quantidade_material = len(newleitor) 
+    st.write("Total de produtos",quantidade_material)
     st.dataframe(newleitor)
+    
