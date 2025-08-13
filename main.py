@@ -18,6 +18,7 @@ if arquivo is not None:
     #aplica a condição de filtro digitada pelo usuario e aplica na planilha 
     if filtro:
         newleitor = leitor[leitor["Nº de série"].astype(str).str.contains(filtro, case=False, na=False)]
+        newleitor = leitor[leitor["Material"].astype(str).str.contains(filtro, case=False, na=False)]
       
     else:
         newleitor = leitor
