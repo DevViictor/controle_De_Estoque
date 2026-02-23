@@ -7,7 +7,7 @@ janela = st.sidebar.radio("", ["Filtro"])
 
 coluns = ["Material","Texto breve material","Nº de série"]
 
-arquivo = st.file_uploader("Carregue a planilha desejada",type=["ods","xlsx"])
+arquivo = st.file_uploader("Carregue a planilha desejada",type=["xlsx"])
 
 st.header("Controle de Estoque")
 
